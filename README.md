@@ -112,3 +112,17 @@ streamlit run streamlit_app.py
 
 This will open the template streamlit app in the web browser. You can now start editing the contents
 of `streamlit_app.py`, and refresh the page in your web browser we see changes.
+
+## Advanced setup
+
+If you're not afraid of the Terminal app (or even better: its alternatives),
+you can simplify the workflow using the more modern
+[uv](https://docs.astral.sh/uv/) tool for managing Python projects and
+dependencies. The benefit is that it frees you from managing Python versions
+manually, installing packages globally via pip, and setting up and activating
+virtual environments.
+
+1. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
+2. TODO: setup pyproject.toml? use the requirements file?
+3. uv sync?
+4. uv run streamlit hello, or uv run streamlit streamlit_app.py
