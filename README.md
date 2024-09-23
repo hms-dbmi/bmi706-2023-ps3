@@ -122,7 +122,7 @@ via pip, and setting up and activating virtual environments.
 
 **uv** works on a project basis: Dependencies specified in the `pyproject.toml`
 file are installed in an isolated (hidden) environment and used whenever you
-run command from the project folder with the `uv run` command.
+run commands from the project folder with `uv run <something>`.
 
 1. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
 2. clone or download the repository, `cd` into it
