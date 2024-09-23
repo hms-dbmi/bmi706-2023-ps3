@@ -115,14 +115,20 @@ of `streamlit_app.py`, and refresh the page in your web browser we see changes.
 
 ## Advanced setup
 
-If you're not afraid of the Terminal app (or even better: its alternatives),
-you can simplify the workflow using the more modern
-[uv](https://docs.astral.sh/uv/) tool for managing Python projects and
-dependencies. The benefit is that it frees you from managing Python versions
-manually, installing packages globally via pip, and setting up and activating
-virtual environments.
+You can simplify the workflow using modern Python dependency management tools,
+specifically the [uv](https://docs.astral.sh/uv/) tool. The benefit is that it
+frees you from managing Python versions manually, installing packages globally
+via pip, and setting up and activating virtual environments.
+
+**uv** works on a project basis: Dependencies specified in the `pyproject.toml`
+file are installed in an isolated (hidden) environment and used whenever you
+run command from the project folder with the `uv run` command.
 
 1. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
-2. TODO: setup pyproject.toml? use the requirements file?
-3. uv sync?
-4. uv run streamlit hello, or uv run streamlit streamlit_app.py
+2. clone or download the repository, `cd` into it
+3. initilize the uv project: `uv init`
+4. add dependencies to the project using the `requirements.txt` file: `uv add
+   -r requirements.txt`
+5. to run the sample Hello application: `uv run streamlit hello`
+6. to run your application: `uv run streamlit run streamlit_app.py` (attention:
+   there's a second `run` command, to specify that you're running a .py file)
