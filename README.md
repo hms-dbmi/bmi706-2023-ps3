@@ -83,8 +83,7 @@ using the Anaconda Navigator.
 
 2.) Select the "▶" icon next to your new environment. Then select "Open terminal":
 
-<img width="1024" src="https://i.stack.imgur.com/EiiFc.png">
-
+[anaconda navigator open in terminal button](https://i.stack.imgur.com/EiiFc.png)
 
 3.) In the terminal that appears, type:
 
