@@ -83,8 +83,7 @@ using the Anaconda Navigator.
 
 2.) Select the "▶" icon next to your new environment. Then select "Open terminal":
 
-<img width="1024" src="https://i.stack.imgur.com/EiiFc.png">
-
+<img width="1024" src="https://i.sstatic.net/EiiFc.png">
 
 3.) In the terminal that appears, type:
 
@@ -113,3 +112,23 @@ streamlit run streamlit_app.py
 
 This will open the template streamlit app in the web browser. You can now start editing the contents
 of `streamlit_app.py`, and refresh the page in your web browser we see changes.
+
+## Advanced setup
+
+You can simplify the workflow using modern Python dependency management tools,
+specifically the [uv](https://docs.astral.sh/uv/) tool. The benefit is that it
+frees you from managing Python versions manually, installing packages globally
+via pip, and setting up and activating virtual environments.
+
+**uv** works on a project basis: Dependencies specified in the `pyproject.toml`
+file are installed in an isolated (hidden) environment and used whenever you
+run commands from the project folder with `uv run <something>`.
+
+1. [Install uv](https://docs.astral.sh/uv/getting-started/installation/)
+2. clone or download the repository, `cd` into it
+3. initilize the uv project: `uv init`
+4. add dependencies to the project using the `requirements.txt` file: `uv add
+   -r requirements.txt`
+5. to run the sample Hello application: `uv run streamlit hello`
+6. to run your application: `uv run streamlit run streamlit_app.py` (attention:
+   there's a second `run` command, to specify that you're running a .py file)
